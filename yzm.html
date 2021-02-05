@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+   *{
+     margin-left: 9px;
+   }
+   body{
+    background:#1c1c1c;
+    color: white;
+   }
+   .w{
+     margin: 0 auto;
+     width: 320px;
+     height: 350px;
+     margin-top: 66px;
+     background:#545454;
+     color: white;
+     display: block;
+     text-align: center;
+     padding:25px 0 0 0;
+     font-size: 14px;
+   }
+   .v{
+     margin-left: -4px;
+     outline: none;
+   }
+   .z{
+     margin: 30px 0 0 -55px;
+     outline: none;
+   }
+   .s{
+     margin: 0 -50px 0 -4px;
+     border:   0   solid   #000000;
+   }
+   .b{
+     margin: 30px;
+     border:   0   solid   #000000;
+
+   }
+   form{
+     margin-left: -25px;
+   }
+   
+   input:hover{
+     border: 2px solid #6298fc;
+   }
+   .l{
+     text-decoration: none;
+     display: inline-block;
+     color:rgb(235, 105, 45);
+     font-size: 12px;
+     margin: 30px 0 0 210px;
+   }
+    ul li{
+     display: inline-block;
+     padding-left: 4px;
+   }
+   ol li{
+     display: inline-block;
+     padding-left: -66px;
+     margin: 20px 0 0 0 ;
+   }
+   ul{
+     text-align: center;   
+     font-size: 10px;
+     color: #696868;
+     margin: 216px 0 0 -90px;
+   }
+   .u{
+     text-align: center;   
+     font-size: 10px;
+     color: #696868;
+     margin: 216px 0 0 -55px;
+     
+     text-decoration: none;
+     padding: 0 0 0 55px;
+   }
+   .left{
+     margin-left: -30px;
+     padding-bottom: 2px;
+   }
+   .left:link{
+     color: white;
+   }
+   .left:visited{
+     color: rgb(235, 105, 45);
+   }
+   .left:hover{
+     border-bottom: 1px solid rgb(235, 105, 45);
+   }
+   .right{
+     margin-left: 90px;
+   }
+   a{
+     color: white;
+     text-decoration: none;
+   }
+  </style>
+  <body>
+    <img src="C:\Users\Lenovo\Pictures\Saved Pictures\开黑.png" width="50px" height="33px">
+    <form action="/register" method="post">
+    <div class="w">
+      <img src="C:\Users\Lenovo\Pictures\Saved Pictures\开黑2.png" width="72px" height="40px">
+      <ol>
+        <li class="left"><a href="D:\Users\Lenovo\Desktop\yzm.html">验证码登录</a></li>
+        <li class="right"><a href="D:\Users\Lenovo\Desktop\mm.html">密码登录</a></li>
+      </ol>
+      <input class="v" type="text" id="user" required placeholder="手机号" style="width:255px; height: 25px; padding-left: 10px;" size="11"/>
+      <input class="z" type="text"  required placeholder="验证码" style="width: 140px; height: 25px; padding-left: 10px;"/>
+      <input class="s" type="submit" value="发送验证码" style="width: 110px; height: 30px;color: white; background-color:rgb(235, 105, 45);"/>
+      <input class="b" type="submit" value="登录" style="border-radius: 30px; width: 270px; height: 30px;color: white; background-color: rgb(235, 105, 45);"/>
+      <a class="l" href="D:\Users\Lenovo\Desktop\lj.html">注册用户</a>
+    </div>
+    
+    </form>
+    <script>
+      var user =document.getElementById("user");
+      user.setCustomValidity("大哥！！手机号必须填！！！");
+  </script>
+  <div>
+    <ul>
+      <li><a class="u" href="https://www.hackerstart.cn/#/">关于我们</a></li>
+      <li><a class="u" href="https://www.hackerstart.cn/#/">联系我们</a></li>
+      <li><a class="u" href="https://www.hackerstart.cn/#/">企业合作</a></li>
+    </ul>
+  </div>
+  </body>
+</html>
