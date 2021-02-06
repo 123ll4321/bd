@@ -47,39 +47,30 @@
      margin-left: -25px;
    }
    
-   input:hover{
-     border: 2px solid #6298fc;
-   }
    .l{
      text-decoration: none;
      display: inline-block;
      color:rgb(235, 105, 45);
      font-size: 12px;
-     margin: 30px 0 0 210px;
+     margin: -15px 0 0 210px;
    }
-    ul li{
-     display: inline-block;
-     padding-left: 4px;
-   }
-   ol li{
-     display: inline-block;
-     padding-left: -66px;
-     margin: 20px 0 0 0 ;
+   ul li{
+     margin:0 20px 0 0;
+     text-align: center;
+
    }
    ul{
-     text-align: center;   
      font-size: 10px;
      color: #696868;
-     margin: 216px 0 0 -90px;
+     margin: 190px 0 0 580px;
+     display: flex;
+     text-align: center;
    }
    .u{
-     text-align: center;   
      font-size: 10px;
      color: #696868;
-     margin: 216px 0 0 -55px;
-     
-     text-decoration: none;
-     padding: 0 0 0 55px;
+     text-align: center;
+
    }
    .left{
      margin-left: -30px;
@@ -117,34 +108,97 @@
      color: white;
      text-decoration: none;
    }
+   /* 清除li样式 */
+   ol,li{
+            list-style: none;
+        }
+        /* 将ul相对定位，目的是让内容的div绝对定位时相对ul定位，否则会相对body定位 */
+        /* ul弹性盒，目的是让li横着排，也可以将li浮动或者转行内块 */
+        ol{
+            position:relative;
+            display:flex;
+        }
+        /* 将三个li宽度平分，高度60px */
+        ol li{
+            flex:1;
+            height:15px;
+        }
+        /* input隐藏 */
+        .r{
+            display:none;
+        }
+        /* 设置input的下一个节点label的样式 */
+        .r+label{
+            display:block;
+            width:100%;
+            height:100%;
+            font-size:14px;
+            text-align: center;
+            line-height:15px;
+            color:rgb(255, 255, 255);
+            margin: 30px 30px 0 -35px;
+        }
+        /* 设置div内容的基础样式 隐藏内容div*/
+        .r+label+div{
+            display:none;
+            position: absolute;
+            left:0;
+            top:60px;
+            margin: -5px 0 0 0;
+        }
+        .r+label:hover{
+          border-bottom: 1px solid rgb(235, 105, 45);
+        }
+        /* input选中状态时候对应的label的样式 */
+        .r:checked+label{
+          
+          color:rgb(235, 105, 45);
+        }
+        /* input选中时候显示对应的div */
+        .r:checked+label+div{
+            display:block;
+        }
   </style>
   <body>
     <img src="C:\Users\Lenovo\Pictures\Saved Pictures\开黑.png" width="50px" height="33px">
     <form action="/register" method="post">
-    <div class="w">
+    <span class="w">
       <img src="C:\Users\Lenovo\Pictures\Saved Pictures\开黑2.png" width="72px" height="40px">
       <ol>
-        <li class="left"><a href="https://github.com/123ll4321/bd/blob/main/yzm.html">验证码登录</a></li>
-        <li class="right"><a href="https://github.com/123ll4321/bd/blob/main/mm.html">密码登录</a></li>
-      </ol>
-      <input class="v" type="text" id="user" required placeholder="手机号" style="width:255px; height: 25px; padding-left: 10px;" size="11"/>
-      <input class="z" type="text"  required placeholder="验证码" style="width: 140px; height: 25px; padding-left: 10px;"/>
-      <input class="s" type="submit" value="发送验证码" style="width: 110px; height: 30px;color: white; background-color:rgb(235, 105, 45);"/>
-      <input class="b" type="submit" value="登录" style="border-radius: 30px; width: 270px; height: 30px;color: white; background-color: rgb(235, 105, 45);"/>
-      <a class="l" href="https://github.com/123ll4321/bd/blob/main/index.html">注册用户</a>
-    </div>
+        <li>
+          <input class="r" type="radio" name="check" id="active1" checked><label for="active1">验证码登录</label>
+          <div>
+            <input class="v" type="text" id="user" required placeholder="手机号" style="width:255px; height: 25px; padding-left: 10px;" size="11"/>
+            <input class="z" type="text"  required placeholder="验证码" style="width: 140px; height: 25px; padding-left: 10px;"/>
+            <input class="s" type="submit" value="发送验证码" style="width: 110px; height: 30px;color: white; background-color:rgb(235, 105, 45);"/>
+            <input class="b" type="submit" value="登录" style="border-radius: 30px; width: 270px; height: 30px;color: white; background-color: rgb(235, 105, 45);"/>
+            <a class="l" href="D:\Users\Lenovo\Desktop\lj.html">注册用户</a>
+          </div>
+        </li>
+        <li>
+        <input class="r" type="radio" name="check" id="active2"><label for="active2">密码登录</label>
+        <div>
+          <input type="text" id="user" required placeholder="邮箱" style="width:255px; height: 25px;margin: 0 0 30px 0 ;" size="11"/>
+          <input type="password"  required placeholder="密码" style="width: 255px; height: 25px;margin: 0;"/>
+          <p style="font-size: 10px;margin: 30px 0 0 200px;color: rgb(146, 140, 140);"><a href="D:\Users\Lenovo\Desktop\wj.html">忘记密码</a></p>
+          <input type="submit" value="登录" style=" border:   0   solid   #000000;border-radius: 30px; width: 270px;margin: 20px 0 20px 0 ; height: 30px;color: white; background-color: rgb(235, 105, 45);"/>
+          <a class="l" href="D:\Users\Lenovo\Desktop\lj.html">注册用户</a>
+        </div>
+      </li>
+    </ol>
+    </span>
     
     </form>
     <script>
       var user =document.getElementById("user");
       user.setCustomValidity("大哥！！！用户名必须填！！！");
   </script>
-  <div>
+  <span>
     <ul>
       <li><a class="u" href="https://www.hackerstart.cn/#/">关于我们</a></li>
       <li><a class="u" href="https://www.hackerstart.cn/#/">联系我们</a></li>
       <li><a class="u" href="https://www.hackerstart.cn/#/">企业合作</a></li>
     </ul>
-  </div>
+  </span>
   </body>
 </html>
